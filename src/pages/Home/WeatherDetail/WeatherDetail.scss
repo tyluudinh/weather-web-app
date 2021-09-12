@@ -1,0 +1,61 @@
+$assetPath : "/images";
+.weather-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 15px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: 50vh;
+  color: var(--white);
+  &__bg-night {
+    background-image: url(bg_night.svg);
+  }
+  &__bg-mornig {
+    background-image: url(bg_morning.svg);
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-col{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      &:last-child {
+        align-items: center;
+      }
+      .current-temp {
+        font-size: 80px;
+        position: relative;
+      }
+      img {
+        margin-bottom: 10px;
+      }
+      span {
+        font-size: 16px;
+        line-height: 1.1;
+      }
+      .celsius {
+        font-size: 20px;
+        position: absolute;
+        top: 14px;
+        right: -23px;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-col {
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 8px;
+      }
+    }
+  }
+}

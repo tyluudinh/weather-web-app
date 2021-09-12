@@ -1,0 +1,87 @@
+$colors: (
+        "purple": #6655E5,
+        "white": #ffffff,
+        "grey": #4B4B4B,
+);
+
+:root {
+  @each $color, $value in $colors {
+    --#{$color}: #{$value};
+  }
+  --max-width: 428px;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  background-color: #EFF2F5;
+}
+
+.root-app {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: 100vh;
+  background-color: white;
+}
+.font-weight-bold {
+  font-weight: bold;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+@each $color, $value in $colors {
+  .text-#{$color} {
+    color: #{$value};
+  }
+  .bg-#{$color} {
+    background-color: #{$value};
+  }
+}
+$els: ('t': 'top', 'r': 'right', 'b': 'bottom', 'l': 'left');
+@each $el, $value in $els {
+  @for $i from 0 through 6 {
+    $v: $i * 0.25;
+    .p#{$el}-#{$i} {
+      padding-#{$value}: #{$v}rem;
+    }
+    .p-#{$i} {
+      padding: #{$v}rem;
+    }
+    .m#{$el}-#{$i} {
+      margin-#{$value}: #{$v}rem;
+    }
+    .m-#{$i} {
+      margin: #{$v}rem;
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  $value: $i * 25;
+  $width: percentage($value / 100);
+
+  .width-#{$value} {
+    width: $width;
+  }
+}
+.d-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.flex-column {
+  flex-direction: column;
+}
