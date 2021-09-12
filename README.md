@@ -14,7 +14,7 @@ A web app built with ReactJS. Powered by OpenWeather API ![Logo](https://openwea
 
 ## Demo
 
-[Host on Netlify](https://weather-web-app-simba.netlify.app/)
+[Host on Netlify](https://613dc8b3bd67ab180d0c6677--nostalgic-lewin-9a29b1.netlify.app/)
 
 ## Installation
 
